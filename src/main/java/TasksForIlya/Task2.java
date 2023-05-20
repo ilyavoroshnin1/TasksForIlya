@@ -53,10 +53,10 @@ class User{
 }
 
 class Randoms {
-    public static String getRandomName(List<String> T) {
+    public static String getRandomName(List<String> list) {
         Random random = new Random();
-        int randomIndex = random.nextInt(T.size());
-        String randomName = T.get(randomIndex);
+        int randomIndex = random.nextInt(list.size());
+        String randomName = list.get(randomIndex);
         return randomName;
     }
 }
