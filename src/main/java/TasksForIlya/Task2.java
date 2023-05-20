@@ -18,10 +18,7 @@ public class Task2 {
         names.add("Victor");
         names.add("Gus");
 
-        Random random = new Random();
-        int randomIndex = random.nextInt(names.size());
-        String randomName = names.get(randomIndex);
-        System.out.println(randomName);
+        System.out.println(Randoms.getRandomName(names));
     }
 }
 
@@ -53,8 +50,13 @@ class User{
     public boolean isMaried() {
         return isMaried;
     }
+}
 
-    public void addName(String name) {
-        this.name=name;
+class Randoms {
+    public static String getRandomName(List<String> T) {
+        Random random = new Random();
+        int randomIndex = random.nextInt(T.size());
+        String randomName = T.get(randomIndex);
+        return randomName;
     }
 }
